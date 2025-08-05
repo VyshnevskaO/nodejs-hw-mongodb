@@ -28,7 +28,8 @@ export const setupServer = () => {
   });
 
   app.get('/contacts/:contactId', async (req, res) => {
-    const contact = await getContactById();
+    const { contactId } = req.params;
+    const contact = await getContactById(contactId);
     if (!contact) {
       res.status(404).json({
         message: 'Contact not found',

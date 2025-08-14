@@ -20,14 +20,14 @@ export const updateContact = async (contactId, payload, options = {}) => {
     { _id: contactId },
     payload,
     {
-      new: false,
+      new: true,
       includeResultMetadata: true,
       ...options,
     },
   );
   if (!rawResult || !rawResult.value) return null;
   return {
-    student: rawResult.value,
+    contact: rawResult.value,
     isNew: Boolean(rawResult?.lastErrorObject?.upserted),
   };
 };

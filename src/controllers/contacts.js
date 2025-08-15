@@ -1,4 +1,5 @@
 import {
+  createContact,
   deleteContact,
   getAllContacts,
   getContactById,
@@ -30,7 +31,9 @@ export const getContactByIdController = async (req, res) => {
 };
 
 export const createContactController = async (req, res) => {
-  const contact = await createContactController(req.body);
+  console.log('Incoming body:', req.body);
+
+  const contact = await createContact(req.body);
   res.status(201).json({
     status: 201,
     message: `Successfully created a contact!`,

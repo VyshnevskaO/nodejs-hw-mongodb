@@ -6,7 +6,7 @@ import { validateBody } from '../middlewares/validateBody.js';
 import {
   loginUserSchema,
   registerUserSchema,
-  requestResetEmailSchema,
+  requestResetEmailSchema as sendResetEmailSchema,
   resetPasswordSchema,
 } from '../validation/auth.js';
 import {
@@ -14,7 +14,7 @@ import {
   logoutUserController,
   refreshUserSessionController,
   registerUserController,
-  requestResetEmailController,
+  requestResetEmailController as sendResetEmailController,
   resetPasswordController,
 } from '../controllers/auth.js';
 
@@ -36,9 +36,9 @@ authRouter.post('/refresh', ctrlWrapper(refreshUserSessionController));
 
 authRouter.post('/logout', ctrlWrapper(logoutUserController));
 authRouter.post(
-  '/request-reset-email',
-  validateBody(requestResetEmailSchema),
-  ctrlWrapper(requestResetEmailController),
+  '/send-reset-email',
+  validateBody(sendResetEmailSchema),
+  ctrlWrapper(sendResetEmailController),
 );
 authRouter.post(
   '/reset-pwd',

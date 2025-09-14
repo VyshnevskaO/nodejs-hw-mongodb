@@ -29,7 +29,7 @@ requestBody:
             type: string
             minLength: 3
             maxLength: 20
-            example: +123456789
+            example: '0983984344'
           email:
             type: string
             minLength: 3
@@ -44,7 +44,7 @@ requestBody:
             example: work
           photo:
             type: string
-            example: https://cdn.example.com/photos/contact1.png
+            format: binary
 responses:
   '200':
     description: Successfully updated a contact!

@@ -189,7 +189,7 @@
                     "type": "string",
                     "minLength": 3,
                     "maxLength": 20,
-                    "example": 123456789
+                    "example": "0939843984"
                   },
                   "email": {
                     "type": "string",
@@ -213,10 +213,6 @@
                   "photo": {
                     "type": "string",
                     "format": "binary"
-                  },
-                  "userId": {
-                    "type": "string",
-                    "example": "64f31d2a9fce123456789abc"
                   }
                 }
               }
@@ -361,7 +357,7 @@
                     "type": "string",
                     "minLength": 3,
                     "maxLength": 20,
-                    "example": 123456789
+                    "example": "0983984344"
                   },
                   "email": {
                     "type": "string",
@@ -384,7 +380,7 @@
                   },
                   "photo": {
                     "type": "string",
-                    "example": "https://cdn.example.com/photos/contact1.png"
+                    "format": "binary"
                   }
                 }
               }
@@ -494,8 +490,8 @@
           },
           "phoneNumber": {
             "description": "Contact's phone number",
-            "type": "number",
-            "example": 1209203922
+            "type": "string",
+            "example": "09097878667"
           },
           "email": {
             "description": "Contact's email",

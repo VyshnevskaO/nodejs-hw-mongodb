@@ -25,7 +25,7 @@ requestBody:
             type: string
             minLength: 3
             maxLength: 20
-            example: +123456789
+            example: '0939843984'
           email:
             type: string
             minLength: 3
@@ -41,9 +41,6 @@ requestBody:
           photo:
             type: string
             format: binary
-          userId:
-            type: string
-            example: 64f31d2a9fce123456789abc
 responses:
   '201':
     description: Successfully created a contact!
